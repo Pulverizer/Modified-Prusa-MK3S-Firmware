@@ -2,7 +2,7 @@
 
 This repository contains the source code and the development versions of the firmware running on the [Original Prusa i3](https://prusa3d.com/) MK3S/MK3/MK2.5S/MK2.5 line of printers.
 
-The latest official builds can be downloaded from [Prusa Drivers](https://www.prusa3d.com/drivers/). Pre-built development releases are also [available here](https://github.com/prusa3d/Prusa-Firmware/releases).
+The latest official builds can be downloaded from [Prusa Drivers](https://www.prusa3d.com/drivers/). Pre-built development releases are also [available here](https://github.com/Pulverizer/Prusa-Firmware/releases).
 
 The firmware for the Original Prusa i3 printers is proudly based on [Marlin 1.0.x](https://github.com/MarlinFirmware/Marlin/) by Scott Lahteine (@thinkyhead) et al. and is distributed under the terms of the [GNU GPL 3 license](LICENSE).
 
@@ -18,7 +18,7 @@ There are two ways to build Prusa-Firmware on Linux: using [CMake](#cmake) (reco
 The workflow should be pretty straightforward for anyone with development experience. After installing git and a recent version of python 3 all you have to do is:
 
     # clone the repository
-    git clone https://github.com/prusa3d/Prusa-Firmware
+    git clone https://github.com/Pulverizer/Prusa-Firmware
     cd Prusa-Firmware
 
     # automatically setup dependencies
@@ -89,7 +89,7 @@ When building the following targets are available:
 Automated tests are built with cmake by configuring for the current host:
 
     # clone the repository
-    git clone https://github.com/prusa3d/Prusa-Firmware
+    git clone https://github.com/Pulverizer/Prusa-Firmware
     cd Prusa-Firmware
 
     # automatically setup dependencies
@@ -128,7 +128,7 @@ PF-build currently assumes a Debian/Ubuntu (or derivative) distribution.
 
 Start by cloning the Prusa-Firmware repository
 
-    git clone https://github.com/prusa3d/Prusa-Firmware
+    git clone https://github.com/Pulverizer/Prusa-Firmware
 
 Open the `Prusa-Firmware` folder in VScode.
 
