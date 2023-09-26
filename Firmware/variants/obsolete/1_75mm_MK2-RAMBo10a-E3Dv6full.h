@@ -202,12 +202,6 @@ BED SETTINGS
 
 #define MBL_Z_STEP 0.01
 
-// Mesh definitions
-#define MESH_MIN_X 35
-#define MESH_MAX_X 238
-#define MESH_MIN_Y 6
-#define MESH_MAX_Y 202
-
 // Mesh upsample definition
 #define MESH_NUM_X_POINTS 7
 #define MESH_NUM_Y_POINTS 7
@@ -371,9 +365,6 @@ THERMISTORS SETTINGS
 
 #define MAX_BED_TEMP_CALIBRATION 50
 #define MAX_HOTEND_TEMP_CALIBRATION 50
-
-#define MAX_E_STEPS_PER_UNIT 250
-#define MIN_E_STEPS_PER_UNIT 100
 
 #define Z_BABYSTEP_MIN -3999
 #define Z_BABYSTEP_MAX 0
