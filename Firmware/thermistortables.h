@@ -172,41 +172,48 @@ const short temptable_4[][2] PROGMEM = {
 
 #if (THERMISTORHEATER_0 == 5) || (THERMISTORBED == 5) //100k ParCan thermistor (104GT-2)
 const short temptable_5[][2] PROGMEM = {
+// Unable to find how column 1 is calculated, this code I found online might help figure it out?
+//
+//             Vin = ???
+// KnownResistance = ???
+//            Vout = (AnalogRead * Vin) / 1024
+//      Resistance = KnownResistance * ((Vin / Vout) - 1)
+//
 // ATC Semitec 104GT-2 (Used in ParCan)
 // Verified by linagee. Source: http://shop.arcol.hu/static/datasheets/thermistors.pdf
 // Calculated using 4.7kohm pullup, voltage divider math, and manufacturer provided temp/resistance
-   {1*OVERSAMPLENR, 713},
-   {17*OVERSAMPLENR, 300}, //top rating 300C
-   {20*OVERSAMPLENR, 290},
-   {23*OVERSAMPLENR, 280},
-   {27*OVERSAMPLENR, 270},
-   {31*OVERSAMPLENR, 260},
-   {37*OVERSAMPLENR, 250},
-   {43*OVERSAMPLENR, 240},
-   {51*OVERSAMPLENR, 230},
-   {61*OVERSAMPLENR, 220},
-   {73*OVERSAMPLENR, 210},
-   {87*OVERSAMPLENR, 200},
-   {106*OVERSAMPLENR, 190},
-   {128*OVERSAMPLENR, 180},
-   {155*OVERSAMPLENR, 170},
-   {189*OVERSAMPLENR, 160},
-   {230*OVERSAMPLENR, 150},
-   {278*OVERSAMPLENR, 140},
-   {336*OVERSAMPLENR, 130},
-   {402*OVERSAMPLENR, 120},
-   {476*OVERSAMPLENR, 110},
-   {554*OVERSAMPLENR, 100},
-   {635*OVERSAMPLENR, 90},
-   {713*OVERSAMPLENR, 80},
-   {784*OVERSAMPLENR, 70},
-   {846*OVERSAMPLENR, 60},
-   {897*OVERSAMPLENR, 50},
-   {937*OVERSAMPLENR, 40},
-   {966*OVERSAMPLENR, 30},
-   {986*OVERSAMPLENR, 20},
-   {1000*OVERSAMPLENR, 10},
-   {1010*OVERSAMPLENR, 0}
+    {  1*OVERSAMPLENR, 713}, //    16
+   {  17*OVERSAMPLENR, 300}, //   276 - top rating 300C
+   {  20*OVERSAMPLENR, 290}, //   320
+   {  23*OVERSAMPLENR, 280}, //   368
+   {  27*OVERSAMPLENR, 270}, //   432
+   {  31*OVERSAMPLENR, 260}, //   496
+   {  37*OVERSAMPLENR, 250}, //   592
+   {  43*OVERSAMPLENR, 240}, //   688
+   {  51*OVERSAMPLENR, 230}, //   816
+   {  61*OVERSAMPLENR, 220}, //   976
+   {  73*OVERSAMPLENR, 210}, //  1168
+   {  87*OVERSAMPLENR, 200}, //  1392
+   { 106*OVERSAMPLENR, 190}, //  1696
+   { 128*OVERSAMPLENR, 180}, //  2048
+   { 155*OVERSAMPLENR, 170}, //  2480
+   { 189*OVERSAMPLENR, 160}, //  3024
+   { 230*OVERSAMPLENR, 150}, //  3680
+   { 278*OVERSAMPLENR, 140}, //  4448
+   { 336*OVERSAMPLENR, 130}, //  5376
+   { 402*OVERSAMPLENR, 120}, //  6432
+   { 476*OVERSAMPLENR, 110}, //  7616
+   { 554*OVERSAMPLENR, 100}, //  8864
+   { 635*OVERSAMPLENR,  90}, // 10160
+   { 713*OVERSAMPLENR,  80}, // 11408
+   { 784*OVERSAMPLENR,  70}, // 12544
+   { 846*OVERSAMPLENR,  60}, // 13536
+   { 897*OVERSAMPLENR,  50}, // 14352
+   { 937*OVERSAMPLENR,  40}, // 14992
+   { 966*OVERSAMPLENR,  30}, // 15456
+   { 986*OVERSAMPLENR,  20}, // 15776
+   {1000*OVERSAMPLENR,  10}, // 16000
+   {1010*OVERSAMPLENR,   0}  // 16160
 };
 #endif
 
