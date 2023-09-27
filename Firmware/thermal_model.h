@@ -101,7 +101,6 @@ static struct
     uint8_t serial;
     bool enabled;
 } log_buf;
-
 static void log_usr(); // user log handler
 static void log_isr(); // isr log handler
 #endif
