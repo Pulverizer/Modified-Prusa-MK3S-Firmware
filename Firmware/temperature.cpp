@@ -1860,7 +1860,7 @@ float current_temperature_ambient_isr;
 // ISR callback from adc when sampling finished
 void adc_callback()
 {
-    current_temperature_raw[0] = adc_values[ADC_PIN_IDX(TEMP_0_PIN)]; //heater
+    current_temperature_raw[0] = adc_values[ADC_PIN_IDX(TEMP_1_PIN)]; //heater - change from TEMP_0_PIN!
     current_temperature_bed_raw = adc_values[ADC_PIN_IDX(TEMP_BED_PIN)];
 #ifdef PINDA_THERMISTOR
     current_temperature_raw_pinda = adc_values[ADC_PIN_IDX(TEMP_PINDA_PIN)];
